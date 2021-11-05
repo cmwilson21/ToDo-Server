@@ -1,4 +1,4 @@
-class UserTodosController < ApplicationController
+class Api::V1::UserTodosController < ApplicationController
   before_action :set_user_todo, only: [:show, :update, :destroy]
 
   # GET /user_todos
