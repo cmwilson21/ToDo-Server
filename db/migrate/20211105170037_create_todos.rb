@@ -5,7 +5,6 @@ class CreateTodos < ActiveRecord::Migration[6.1]
       t.boolean :completed
       t.string :task
       t.string :category
-      t.string :assignee
       t.string :priority
       t.belongs_to :user, null: false, foreign_key: true
 
