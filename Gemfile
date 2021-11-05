@@ -44,3 +44,5 @@ gem 'pry'
 gem 'active_model_serializers'
 
 gem 'rspec'
+
+gem 'jwt'
