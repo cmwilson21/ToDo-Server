@@ -18,7 +18,7 @@ class UserTodosController < ApplicationController
     @user_todo = UserTodo.new(user_todo_params)
 
     if @user_todo.save
-      render json: @user_todo, status: :created, location: @user_todo
+      render json: @user_todo, status: :created
     else
       render json: @user_todo.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class UserTodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_todo_params
-      params.require(:user_todo).permit(:user_id, :todo_id)
+      params.permit(:user_id, :todo_id)
     end
 end

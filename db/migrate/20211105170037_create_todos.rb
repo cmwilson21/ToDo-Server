@@ -6,7 +6,6 @@ class CreateTodos < ActiveRecord::Migration[6.1]
       t.string :task
       t.string :category
       t.string :priority
-      t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps
     end
