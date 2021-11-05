@@ -10,6 +10,4 @@ class Api::V1::SessionsController < ApplicationController
       render json: {errors: ["Email or password did not match"]}, status: 422
     end
   end
-
-
 end
