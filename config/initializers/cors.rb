@@ -7,9 +7,9 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    # origins 'localhost:3000'
+    origins 'localhost:3000'
     # origins 'https://todo-listsb-server.herokuapp.com/api/v1/'
-    origins "http://localhost:3000/api/v1/", 'https://todo-listsb-server.herokuapp.com/api/v1/'
+    # origins ["localhost:3000", 'https://todo-listsb-server.herokuapp.com/api/v1/']
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
