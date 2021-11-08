@@ -46,6 +46,6 @@ class Api::V1::TodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.permit(:upvote, :completed, :task, :category, :assignee, :priority, user_ids:[])
+      params.permit(:upvote, :completed, :task, :category, :assignee, :priority)
     end
 end
