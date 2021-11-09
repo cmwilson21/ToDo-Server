@@ -46,3 +46,4 @@ gem 'active_model_serializers'
 gem 'rspec'
 
 gem 'jwt'
+gem "dotenv-rails", "~> 2.7"
