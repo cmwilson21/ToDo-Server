@@ -1,4 +1,5 @@
 class Api::V1::TodosController < ApplicationController
+  skip_before_action :authorized 
   before_action :set_todo, only: [:show, :update, :destroy]
 
   # GET /todos
