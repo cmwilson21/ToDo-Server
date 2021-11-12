@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  # before_action :authorized
+  before_action :authorized
 
 
   def encode_token(payload)
@@ -32,6 +32,7 @@ class ApplicationController < ActionController::API
   end
 
   def logged_in?
+    binding.pry
     !!current_user
   end
 
