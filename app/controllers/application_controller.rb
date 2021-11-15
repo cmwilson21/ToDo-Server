@@ -14,10 +14,10 @@ class ApplicationController < ActionController::API
   
   def decoded_token
     if auth_header
-      @token = auth_header.split(' ')[1]
+      token = auth_header.split(' ')[1]
       # binding.pry
       begin
-        JWT.decode(@token, ENV["JWT_SECRET"], true, algorithm: ENV["ALGO"])
+        JWT.decode(token, ENV["JWT_SECRET"], true, algorithm: ENV["ALGO"])
       rescue JWT::DecodeError
         nil
       end
@@ -26,10 +26,10 @@ class ApplicationController < ActionController::API
 
   
   def current_user
+    # binding.pry
     if decoded_token
       user_id = decoded_token[0]['user_id']
       @user = User.find_by(id: user_id)
-      # binding.pry
     end
   end
 
