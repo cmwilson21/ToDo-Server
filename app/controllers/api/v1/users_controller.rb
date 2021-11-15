@@ -31,6 +31,7 @@ class Api::V1::UsersController < ApplicationController
   def get_current_user
     if logged_in?
       render json: {user: current_user}, status: :ok
+      # binding.pry
     else
       render json: {errors: ["User not logged in."]}, status: :ok
     end
