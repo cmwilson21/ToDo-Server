@@ -12,8 +12,8 @@ puts "seeding database"
 User.create(first_name: "Gatsby", username: "gatsbydog", last_name: "Dog", email: "gatsby@dog.com", password: "password", is_adult: true, date_of_birth: "09-09-1909")
 User.create(first_name: "Bob", username: "bobman", last_name: "Bobo", email: "bob@bob.com", password: "password", is_adult: true, date_of_birth: "09-09-1909")
 
-Todo.create(task: "Walk the dog", upvote: 4, completed: false, category: "pet", priority: "high")
-Todo.create(task: "Water the plants", upvote: 3, completed: false, category: "house", priority: "medium")
-Todo.create(task: "Do dishes", upvote: 2, completed: true, category: "house", priority: "low")
+Todo.create(task: "Walk the dog", upvote: 4, completed: false, category: "pet", priority: 1)
+Todo.create(task: "Water the plants", upvote: 3, completed: false, category: "house", priority: 2)
+Todo.create(task: "Do dishes", upvote: 2, completed: true, category: "house", priority: 3)
 
 puts "completed seeding"

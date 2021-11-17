@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_11_05_181852) do
     t.boolean "completed"
     t.string "task"
     t.string "category"
-    t.string "priority"
+    t.integer "priority"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

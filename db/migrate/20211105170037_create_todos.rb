@@ -5,7 +5,7 @@ class CreateTodos < ActiveRecord::Migration[6.1]
       t.boolean :completed
       t.string :task
       t.string :category
-      t.string :priority
+      t.integer :priority
 
       t.timestamps
     end
