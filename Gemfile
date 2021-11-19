@@ -47,3 +47,11 @@ gem 'rspec'
 
 gem 'jwt'
 gem "dotenv-rails", "~> 2.7"
+gem 'rexml'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'capybara'
+  gem 'database_cleaner-active_record'
+  gem 'poltergeist'
+end
