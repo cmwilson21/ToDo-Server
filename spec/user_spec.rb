@@ -45,13 +45,14 @@ RSpec.describe User, type: :model do
       expect(@hank).to_not be_valid
     end
 
-    # it "has a unique email" do
-    #   @bobby = User.new(first_name: "Bobby", last_name: "Hill", email: "hank@propane.com", date_of_birth: 01/01/2001)
-    #   expect(hank2).to_not be_valid
-  # end
-
- 
+    
+    
   end
-
+  
+  it "has a unique email" do
+    @hank = User.create(first_name: "Hank", last_name: "Hill", email: "hank@propane.com", password: "password", date_of_birth: 01/01/1970)
+    @bobby = User.create(first_name: "Bobby", last_name: "Hill", email: "hank@propane.com", password: "password", date_of_birth: 01/01/1990)
+    expect(@bobby).to_not be_valid
+  end
 
 end
