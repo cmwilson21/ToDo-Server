@@ -6,8 +6,6 @@ RSpec.describe Todo, type: :model do
     expect {Todo}.to_not raise_error
   end
 
-  # it "can be initialized" do
-  #   expect {Todo.new(false )}
 
   context "has reader and writer" do
     it "can read and write a task" do
@@ -30,21 +28,11 @@ RSpec.describe Todo, type: :model do
     end
 
     it ".all returns an array of all todos" do
-      # @turtle = Todo.new
-      # @turtle.task = "Walk the turtle"
-      # @groceries = Todo.new
-      # @groceries.task = "Buy groceries"
-      # Todo.all << @turtle
-      # Todo.all << @groceries
       expect(Todo.all).to eq([@turtle, @groceries])
     end
 
     it "#save saves the todo object in the @@all array" do
-      # @turtle = Todo.new
-      # @turtle.task = "Walk the turtle"
       @turtle.save
-      # @groceries = Todo.new
-      # @groceries.task = "Buy groceries"
       @groceries.save
       expect(Todo.all).to eq([@turtle, @groceries])
     end
